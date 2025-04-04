@@ -1,0 +1,765 @@
+kd40@Tomoki-Fukuda MINGW64 /
+$ git config --global user.name
+
+fkd40@Tomoki-Fukuda MINGW64 /
+$ git config --user.email
+error: unknown option `user.email'
+usage: git config list [<file-option>] [<display-option>] [--includes]
+   or: git config get [<file-option>] [<display-option>] [--includes] [--all] [--regexp] [--value=<value>] [--fixed-value] [--default=<default>] <name>
+   or: git config set [<file-option>] [--type=<type>] [--all] [--value=<value>] [--fixed-value] <name> <value>
+   or: git config unset [<file-option>] [--all] [--value=<value>] [--fixed-value] <name>
+   or: git config rename-section [<file-option>] <old-name> <new-name>
+   or: git config remove-section [<file-option>] <name>
+   or: git config edit [<file-option>]
+   or: git config [<file-option>] --get-colorbool <name> [<stdout-is-tty>]
+
+Config file location
+    --[no-]global         use global config file
+    --[no-]system         use system config file
+    --[no-]local          use repository config file
+    --[no-]worktree       use per-worktree config file
+    -f, --[no-]file <file>
+                          use given config file
+    --[no-]blob <blob-id> read config from given blob object
+
+Action
+    --get                 get value: name [<value-pattern>]
+    --get-all             get all values: key [<value-pattern>]
+    --get-regexp          get values for regexp: name-regex [<value-pattern>]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [<value-pattern>]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [<value-pattern>]
+    --unset-all           remove all matches: name [<value-pattern>]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [<default>]
+    --get-colorbool       find the color setting: slot [<stdout-is-tty>]
+
+Display options
+    -z, --[no-]null       terminate values with NUL byte
+    --[no-]name-only      show variable names only
+    --[no-]show-origin    show origin of config (file, standard input, blob, command line)
+    --[no-]show-scope     show scope of config (worktree, local, global, system, command)
+    --[no-]show-names     show config keys in addition to their values
+
+Type
+    -t, --[no-]type <type>
+                          value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    --[no-]default <value>
+                          with --get, use default value when missing entry
+    --[no-]comment <value>
+                          human-readable comment string (# will be prepended as needed)
+    --[no-]fixed-value    use string equality when comparing values to value pattern
+    --[no-]includes       respect include directives on lookup
+
+
+fkd40@Tomoki-Fukuda MINGW64 /
+$ git config --global user.name
+git config --global user.email
+
+fkd40@Tomoki-Fukuda MINGW64 /
+$ git config --global user.name "fukudatomoki"
+
+fkd40@Tomoki-Fukuda MINGW64 /
+$ git config --global user.email "fkd4021@gmail.com"
+
+fkd40@Tomoki-Fukuda MINGW64 /
+$ git config --global user.name
+git config --global user.email
+fukudatomoki
+fkd4021@gmail.com
+
+fkd40@Tomoki-Fukuda MINGW64 /
+$ git config init.defaultBranch
+master
+
+fkd40@Tomoki-Fukuda MINGW64 /
+$ git config --global init.defaultBranch main
+
+fkd40@Tomoki-Fukuda MINGW64 /
+$ ^[[200~# カレントディレクトリにgit_tutorialディレクトリを作成する
+bash: $'\E[200~#': command not found
+
+fkd40@Tomoki-Fukuda MINGW64 /
+$ mkdir git_tutorial
+mkdir: cannot create directory ‘git_tutorial’: Permission denied
+
+fkd40@Tomoki-Fukuda MINGW64 /
+$ # カレントディレクトリにgit_tutorialディレクトリを作成する
+mkdir git_tutorial
+mkdir: cannot create directory ‘git_tutorial’: Permission denied
+
+fkd40@Tomoki-Fukuda MINGW64 /
+$ mkdir git_tutorial
+mkdir: cannot create directory ‘git_tutorial’: Permission denied
+
+fkd40@Tomoki-Fukuda MINGW64 /
+$ cd
+
+fkd40@Tomoki-Fukuda MINGW64 ~
+$ mkdir git_tutorial
+
+fkd40@Tomoki-Fukuda MINGW64 ~
+$ cd
+
+fkd40@Tomoki-Fukuda MINGW64 ~
+$ git init
+Initialized empty Git repository in C:/Users/fkd40/.git/
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ git add sample.txt
+fatal: pathspec 'sample.txt' did not match any files
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ git add sample.txt
+fatal: pathspec 'sample.txt' did not match any files
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ git add sample.txt
+fatal: pathspec 'sample.txt' did not match any files
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ git add sample.txt
+fatal: pathspec 'sample.txt' did not match any files
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cd
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ git add sample.txt
+fatal: pathspec 'sample.txt' did not match any files
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cd path/to/git_tutorial
+bash: cd: path/to/git_tutorial: No such file or directory
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ touch sample.txt
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ echo "侍テラコヤ" > sample.txt
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cat sample.txt
+侍テラコヤ
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ git add sample.txt
+warning: in the working copy of 'sample.txt', LF will be replaced by CRLF the next time Git touches it
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cd path/to/git_tutorial
+bash: cd: path/to/git_tutorial: No such file or directory
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ touch sample.txt
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ echo "侍テラコヤ" > sample.txt
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cat sample.txt
+侍テラコヤ
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ git add sample.txt
+warning: in the working copy of 'sample.txt', LF will be replaced by CRLF the next time Git touches it
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ echo. > sample.txt
+echo 侍テラコヤ > sample.txt
+bash: echo.: command not found
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ type nul > sample.txt
+echo 侍テラコヤ > sample.txt
+bash: type: nul: not found
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ New-Item -Path . -Name "sample.txt" -ItemType "File"
+Set-Content sample.txt "侍テラコヤ"
+bash: New-Item: command not found
+bash: Set-Content: command not found
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ echo. > sample.txt
+echo 侍テラコヤ > sample.txt
+bash: echo.: command not found
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cd path/to/git_tutorial
+bash: cd: path/to/git_tutorial: No such file or directory
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ touch sample.txt
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ echo "侍テラコヤ" > sample.txt
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cat sample.txt
+侍テラコヤ
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ git commit -m "最初のコミット"
+[main (root-commit) c7bfe26] 最初のコミット
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sample.txt
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ git status
+warning: could not open directory 'AppData/Local/Application Data/': Permission denied
+warning: could not open directory 'Application Data/': Permission denied
+warning: could not open directory 'Cookies/': Permission denied
+warning: could not open directory 'Local Settings/': Permission denied
+warning: could not open directory 'My Documents/': Permission denied
+warning: could not open directory 'NetHood/': Permission denied
+warning: could not open directory 'PrintHood/': Permission denied
+warning: could not open directory 'Recent/': Permission denied
+warning: could not open directory 'SendTo/': Permission denied
+warning: could not open directory 'Templates/': Permission denied
+warning: could not open directory 'スタート メニュー/': Permission denied
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .bash_history
+        .gitconfig
+        .lesshst
+        .ssh/
+        .vscode/
+        AppData/
+        Contacts/
+        Desktop/
+        Documents/
+        Downloads/
+        Favorites/
+        Links/
+        Music/
+        NTUSER.DAT
+        NTUSER.DAT{1ae099e6-ef2b-11ef-ad69-e862beb757a9}.TM.blf
+        NTUSER.DAT{1ae099e6-ef2b-11ef-ad69-e862beb757a9}.TMContainer00000000000000000001.regtrans-ms
+        NTUSER.DAT{1ae099e6-ef2b-11ef-ad69-e862beb757a9}.TMContainer00000000000000000002.regtrans-ms
+        OneDrive/
+        Pictures/
+        Saved Games/
+        Searches/
+        Videos/
+        WPS Cloud Files/
+        ntuser.dat.LOG1
+        ntuser.dat.LOG2
+        ntuser.ini
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ ssh-keygen -t rsa -C fkd4021@gmail.com
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/fkd40/.ssh/id_rsa):
+/c/Users/fkd40/.ssh/id_rsa already exists.
+Overwrite (y/n)? n
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cat /c/Users/fkd40/.ssh/id_rsa.ssh/id_rsa.pub.
+cat: /c/Users/fkd40/.ssh/id_rsa.ssh/id_rsa.pub.: No such file or directory
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ ssh-keygen -t rsa -C fkd4021@gmail.com
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/fkd40/.ssh/id_rsa):
+/c/Users/fkd40/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase for "/c/Users/fkd40/.ssh/id_rsa" (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/fkd40/.ssh/id_rsa
+Your public key has been saved in /c/Users/fkd40/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:WwZsWFgbiT9w7ggWtUPLjKv/QfFgumUoqIR1RJ7lt+I fkd4021@gmail.com
+The key's randomart image is:
++---[RSA 3072]----+
+|   .o.+++.       |
+|   o.O+*oo       |
+|  . =.%=*        |
+|.o .o= B+o       |
+|o...+.=oS.o      |
+|o  o *...+       |
+|. . . E .        |
+|   .   .         |
+|    ...          |
++----[SHA256]-----+
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cat /c/Users/fkd40/.ssh/id_rsa.ssh/id_rsa.pub
+cat: /c/Users/fkd40/.ssh/id_rsa.ssh/id_rsa.pub: No such file or directory
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cat /c/Users/fkd40/.ssh/id_rsa
+-----BEGIN OPENSSH PRIVATE KEY-----
+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
+MmDaxNaFJJ1V94umy8GD09KQQFU=
+-----END OPENSSH PRIVATE KEY-----
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cat /c/Users/fkd40/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCwrnnv7qjxvqeOsTWcbugba8JbJG4qxxOXbMbSMcY4WhoDRkmgXSkD2Vah8Nj33fetac0bJevE7VRwQ7Z3I2YeCD1JWLcG6FkrktxPc4bbywCeTwvfZcFKCHkqhMzmFPtBcp50+MGiQx6gAFVwah4cZGWJZ4HfvP4grKiMbHIyK9WIfExu/Vg9GDOk659u4TIGROJPUU0exwasOQyrjUdlAl9jcy5mtHIhQBMraYpcz5VejPJNezhRuFe1bw/VC79yveBnt5liKAqsV65ro/6w47X2kZlEBTN5NCpZHGBGL8AcGyNNxUN6aPqAsJ9RckRT9vZVOFNaCf5SoRfROqOPtW0hWlmByD9U9P0NTEbvGopXE3jYAL6Mxbqopo/3QNV8Vw3KWUv19T4mKv+TzsNVwP9MbvwmbrVax+ETnp0cXKUhFRv9R+PCI1M9D+6ypDOd4OWRYgJ/cyJ6j+3NFBzI51c/RSUZ5zcCjEs+QcP3iGqL0M4QfqEpQRlNnMpbNEU= fkd4021@gmail.com
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ ssh -T git@github.com
+Enter passphrase for key '/c/Users/fkd40/.ssh/id_rsa':
+Hi fukudatomoki! You've successfully authenticated, but GitHub does not provide shell access.
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ git remote add origin git@github.com:fukudatomoki/samurai_terakoya.git
+git branch -M main
+git push -u origin main
+Enter passphrase for key '/c/Users/fkd40/.ssh/id_rsa':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 252 bytes | 252.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:fukudatomoki/samurai_terakoya.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ git remote -v
+origin  git@github.com:fukudatomoki/samurai_terakoya.git (fetch)
+origin  git@github.com:fukudatomoki/samurai_terakoya.git (push)
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ git push -u origin main
+Enter passphrase for key '/c/Users/fkd40/.ssh/id_rsa':
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cd
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ mkdir git_challenge
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cd
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/fkd40/.git/
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cd
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ git add hello_world.txt
+fatal: pathspec 'hello_world.txt' did not match any files
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cd git_challenge
+
+fkd40@Tomoki-Fukuda MINGW64 ~/git_challenge (main)
+$ git init
+Initialized empty Git repository in C:/Users/fkd40/git_challenge/.git/
+
+fkd40@Tomoki-Fukuda MINGW64 ~/git_challenge (main)
+$ git add hello_world.txt
+
+fkd40@Tomoki-Fukuda MINGW64 ~/git_challenge (main)
+$ git commit -m "Add hello_world.txt"
+[main (root-commit) c903e00] Add hello_world.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello_world.txt
+
+fkd40@Tomoki-Fukuda MINGW64 ~/git_challenge (main)
+$ git commit -m "hello_world.txtを追加"
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello_world.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+fkd40@Tomoki-Fukuda MINGW64 ~/git_challenge (main)
+$ git commit -m "日本語訳を追加"
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello_world.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+fkd40@Tomoki-Fukuda MINGW64 ~/git_challenge (main)
+$ git add hello_world.txt
+git commit -m "hello_world.txtを追加"
+[main e6775c1] hello_world.txtを追加
+ 1 file changed, 2 insertions(+)
+
+fkd40@Tomoki-Fukuda MINGW64 ~/git_challenge (main)
+$ git add hello_world.txt
+git commit -m "日本語訳を追加"
+[main 3d67f1f] 日本語訳を追加
+ 1 file changed, 1 insertion(+)
+
+fkd40@Tomoki-Fukuda MINGW64 ~/git_challenge (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+fkd40@Tomoki-Fukuda MINGW64 ~/git_challenge (main)
+$ git log
+commit 3d67f1f83b66dcbb56c540c5219301ff5b5692bc (HEAD -> main)
+Author: fukudatomoki <fkd4021@gmail.com>
+Date:   Fri Apr 4 10:17:57 2025 +0900
+
+    日本語訳を追加
+
+commit e6775c157a1732e4c6b1a6f9984eac73d36797cb
+Author: fukudatomoki <fkd4021@gmail.com>
+Date:   Fri Apr 4 10:16:53 2025 +0900
+
+    hello_world.txtを追加
+
+commit c903e00b75867fcd3ae951ba097f509fd97e6831
+Author: fukudatomoki <fkd4021@gmail.com>
+Date:   Fri Apr 4 10:09:15 2025 +0900
+
+    Add hello_world.txt
+
+fkd40@Tomoki-Fukuda MINGW64 ~/git_challenge (main)
+$ cd
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cd git_challenge
+
+fkd40@Tomoki-Fukuda MINGW64 ~/git_challenge (main)
+$ cd
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ mkdir kadai_005.txt
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ mkdir kadai_005
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cd kadai005
+bash: cd: kadai005: No such file or directory
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cd git_challenge
+
+fkd40@Tomoki-Fukuda MINGW64 ~/git_challenge (main)
+$ cd kadai_005
+bash: cd: kadai_005: No such file or directory
+
+fkd40@Tomoki-Fukuda MINGW64 ~/git_challenge (main)
+$ cd
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cd kadai_005
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git init
+Initialized empty Git repository in C:/Users/fkd40/kadai_005/.git/
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git add kadai_005.txt
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git remote -v
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git remote add origin git@github.com:fukudatomoki/samurai_terakoya.git
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git remote -v
+origin  git@github.com:fukudatomoki/samurai_terakoya.git (fetch)
+origin  git@github.com:fukudatomoki/samurai_terakoya.git (push)
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'github.com:fukudatomoki/samurai_terakoya.git'
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git remote add origin git@github.com:fukudatomoki/git-basic-kadai.git
+error: remote origin already exists.
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git remote -v
+origin  git@github.com:fukudatomoki/samurai_terakoya.git (fetch)
+origin  git@github.com:fukudatomoki/samurai_terakoya.git (push)
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git remote -v
+origin  git@github.com:fukudatomoki/samurai_terakoya.git (fetch)
+origin  git@github.com:fukudatomoki/samurai_terakoya.git (push)
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'github.com:fukudatomoki/samurai_terakoya.git'
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git remote add origin git@github.com:fukudatomoki/git-basic-kadai.git
+git branch -M main
+git push -u origin main
+error: remote origin already exists.
+error: src refspec main does not match any
+error: failed to push some refs to 'github.com:fukudatomoki/samurai_terakoya.git'
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ echo "# git-basic-kadai" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:fukudatomoki/git-basic-kadai.git
+git push -u origin main
+Reinitialized existing Git repository in C:/Users/fkd40/kadai_005/.git/
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+[main (root-commit) 1765f0b] first commit
+ 2 files changed, 1 insertion(+)
+ create mode 100644 README.md
+ create mode 100644 kadai_005.txt
+error: remote origin already exists.
+Enter passphrase for key '/c/Users/fkd40/.ssh/id_rsa':
+To github.com:fukudatomoki/samurai_terakoya.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:fukudatomoki/samurai_terakoya.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git remote add origin git@github.com:fukudatomoki/git-basic-kadai.git
+git branch -M main
+git push -u origin main
+error: remote origin already exists.
+Enter passphrase for key '/c/Users/fkd40/.ssh/id_rsa':
+To github.com:fukudatomoki/samurai_terakoya.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:fukudatomoki/samurai_terakoya.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git remote -v
+origin  git@github.com:fukudatomoki/samurai_terakoya.git (fetch)
+origin  git@github.com:fukudatomoki/samurai_terakoya.git (push)
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ echo "# git-basic-kadai" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:fukudatomoki/git-basic-kadai.git
+git push -u origin main
+Reinitialized existing Git repository in C:/Users/fkd40/kadai_005/.git/
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+[main c554d10] first commit
+ 1 file changed, 1 insertion(+)
+error: remote origin already exists.
+Enter passphrase for key '/c/Users/fkd40/.ssh/id_rsa':
+To github.com:fukudatomoki/samurai_terakoya.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:fukudatomoki/samurai_terakoya.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git remote add origin git@github.com:fukudatomoki/git-basic-kadai.git
+git branch -M main
+git push -u origin main
+error: remote origin already exists.
+Enter passphrase for key '/c/Users/fkd40/.ssh/id_rsa':
+To github.com:fukudatomoki/samurai_terakoya.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:fukudatomoki/samurai_terakoya.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git remote -v
+origin  git@github.com:fukudatomoki/samurai_terakoya.git (fetch)
+origin  git@github.com:fukudatomoki/samurai_terakoya.git (push)
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ ssh -T git@github.com
+Enter passphrase for key '/c/Users/fkd40/.ssh/id_rsa':
+Hi fukudatomoki! You've successfully authenticated, but GitHub does not provide shell access.
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git remote add origin git@github.com:fukudatomoki/git-basic-kadai.git
+git branch -M main
+git push -u origin main
+error: remote origin already exists.
+Enter passphrase for key '/c/Users/fkd40/.ssh/id_rsa':
+To github.com:fukudatomoki/samurai_terakoya.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:fukudatomoki/samurai_terakoya.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git pull origin main
+Enter passphrase for key '/c/Users/fkd40/.ssh/id_rsa':
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 232 bytes | 38.00 KiB/s, done.
+From github.com:fukudatomoki/samurai_terakoya
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+fatal: refusing to merge unrelated histories
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git push -u origin main
+Enter passphrase for key '/c/Users/fkd40/.ssh/id_rsa':
+To github.com:fukudatomoki/samurai_terakoya.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:fukudatomoki/samurai_terakoya.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git pull origin main
+Enter passphrase for key '/c/Users/fkd40/.ssh/id_rsa':
+From github.com:fukudatomoki/samurai_terakoya
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git remote add origin git@github.com:fukudatomoki/git-basic-kadai.git
+error: remote origin already exists.
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ ^[[200~git remote -v~
+bash: $'\E[200~git': command not found
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git remote -v
+origin  git@github.com:fukudatomoki/samurai_terakoya.git (fetch)
+origin  git@github.com:fukudatomoki/samurai_terakoya.git (push)
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git remote set-url origin git@github.com:fukudatomoki/git-basic-kadai.git
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git remote -v
+origin  git@github.com:fukudatomoki/git-basic-kadai.git (fetch)
+origin  git@github.com:fukudatomoki/git-basic-kadai.git (push)
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git push -u origin main
+Enter passphrase for key '/c/Users/fkd40/.ssh/id_rsa':
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 540 bytes | 540.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:fukudatomoki/git-basic-kadai.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ cd
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ git push
+Enter passphrase for key '/c/Users/fkd40/.ssh/id_rsa':
+Everything up-to-date
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cd kadai_005
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git remote -v
+origin  git@github.com:fukudatomoki/git-basic-kadai.git (fetch)
+origin  git@github.com:fukudatomoki/git-basic-kadai.git (push)
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ cd git_challenge
+bash: cd: git_challenge: No such file or directory
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git remote -v
+fatal: Unable to read current working directory: No such file or directory
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005
+$ cd
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ mkdir kadai_005
+
+fkd40@Tomoki-Fukuda MINGW64 ~ (main)
+$ cd kadai_005
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$ git init
+Initialized empty Git repository in C:/Users/fkd40/kadai_005/.git/
+
+fkd40@Tomoki-Fukuda MINGW64 ~/kadai_005 (main)
+$
